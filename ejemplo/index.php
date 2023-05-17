@@ -35,9 +35,9 @@ $result = $mysql->query($query);
 
 /** Recorrer los registros de la consulta */
 while ( $row = $result->fetch_assoc()) {
-    printf("<i>%s</i> <strong>%s</strong> <i>%s</i> (%s)<br>", $row['id'], $row['nombre'], $row['artista'], $row['ano_publicacion']);
-}
 
+    echo "<i>". $row['id'] . "</i> <strong>" . $row['nombre'] . "</strong> <i>". $row['artista'] ."</i>" . $row['ano_publicacion'] . "<br>";
+}
 ?>
 </body>
 </html>
