@@ -9,7 +9,7 @@
 <body>
     <h1>Búsqueda de canciones</h1>
     <form action="index.php" method="get">
-        <input type="text" name="term">
+        <input type="text" name="term" id="term">
         <input type="submit" value="Buscar canción">
     </form>
 
@@ -36,7 +36,7 @@ $result = $mysql->query($query);
 /** Recorrer los registros de la consulta */
 while ( $row = $result->fetch_assoc()) {
 
-    echo "<i>". $row['id'] . "</i> <strong>" . $row['nombre'] . "</strong> <i>". $row['artista'] ."</i>" . $row['ano_publicacion'] . "<br>";
+    echo "<i>". $row['id'] . "</i> <strong>" . $row['nombre'] . "</strong> <i>". $row['artista'] ."</i> (" . $row['ano_publicacion'] . ")<br>";
 }
 ?>
 </body>
