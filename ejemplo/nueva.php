@@ -24,7 +24,7 @@
 <?php
 
 /** Conexión a la Base de Datos */
-$mysql = new mysqli($host = 'localhost', $username = 'dam', $password = 'dam', $dbname = 'musica');
+$mysql = new mysqli($host = 'localhost', $username = 'root', $password = 'root', $dbname = 'musica');
 
 if( !isset($_REQUEST['nombre']) &&
     !isset($_REQUEST['artista']) &&
